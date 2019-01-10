@@ -23,11 +23,13 @@ class Swords(Weapon): #class for creating swords
         self.price = price
 
     def info(self):
-        Info = self.name + " is attack weapon that increases attack points" + " for " + str(self.attack_points) + " pts and health points for " + str(self.health_points) + "!"
-        return Info
+        return "{} is attack weapon that increases attack points + {} pts and health points for {}!".format(
+            self.name, 
+            self.attack_points, 
+            self.health_points
+        )
 
     def __str__(self):
-
         return "Sword name: {}\nSword attack: +{}\nSword price: {}\n".format(self.name,
                                                                              self.attack_points,
                                                                              self.price)
